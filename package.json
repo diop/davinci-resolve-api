@@ -1,0 +1,17 @@
+{
+  "name": "davinci-resolve-script",
+  "version": "1.0.0",
+  "description": "Davinci Resolve Scripting Documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "davinci",
+    "resolve",
+    "scripting",
+    "documentation"
+  ],
+  "author": "Fodé Diop",
+  "license": "MIT"
+}
