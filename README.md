@@ -1,5 +1,5 @@
 ## Rationale
-I could not find adequate web documentation for the Davinci Resolve Api online, so I made one.
+I could not find adequate web documentation for the Davinci Resolve Api online, so I made one. [https://diop.github.io/davinci-resolve-api/#/](https://diop.github.io/davinci-resolve-api/#/)
 
 ## Updated as of 13 September 2018
 In this package, you will find a brief introduction to the Scripting API for DaVinci Resolve Studio. Apart from this README file, this package contains folders containing the basic import [modules](https://github.com/diop/davinci-resolve-api/tree/master/Modules) for scripting access (DaVinciResolve.py) and some representative [examples](https://github.com/diop/davinci-resolve-api/tree/master/Examples).

@@ -1,16 +1,14 @@
-## Updated as of 13 September 2018
+## Rationale
+I could not find adequate web documentation for the Davinci Resolve Api online, so I made one. [https://diop.github.io/davinci-resolve-api/#/](https://diop.github.io/davinci-resolve-api/#/)
 
---------------------------
-In this package, you will find a brief introduction to the Scripting API for DaVinci Resolve Studio. Apart from this README.txt file, this package contains folders containing the basic import modules for scripting access (DaVinciResolve.py) and some representative examples.
+## Updated as of 13 September 2018
+In this package, you will find a brief introduction to the Scripting API for DaVinci Resolve Studio. Apart from this README file, this package contains folders containing the basic import [modules](https://github.com/diop/davinci-resolve-api/tree/master/Modules) for scripting access (DaVinciResolve.py) and some representative [examples](https://github.com/diop/davinci-resolve-api/tree/master/Examples).
 
 ## Overview
---------
-
 As with Blackmagic Design Fusion scripts, user scripts written in Lua and Python programming languages are supported. By default, scripts can be invoked from the Console window in the Fusion page, or via command line. This permission can be changed in Resolve Preferences, to be only from Console, or to be invoked from the local network. Please be aware of the security implications when allowing scripting access from outside of the Resolve application.
 
 
 ## Using a script
---------------
 DaVinci Resolve needs to be running for a script to be invoked.
 
 For a Resolve script to be executed from an external folder, the script needs to know of the API location. 
