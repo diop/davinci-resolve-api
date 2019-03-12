@@ -61,7 +61,7 @@ Some commonly used API functions are described below (*). As with the resolve ob
   * ```Fusion()```                                        --> Fusion             # Returns the Fusion object. Starting point for Fusion scripts.
   * ```GetMediaStorage()```                               --> MediaStorage       # Returns media storage object to query and act on media locations.
   * ```GetProjectManager()```                             --> ProjectManager     # Returns project manager object for currently open database.
-  * ```OpenPage(pageName)```                              --> None               # Switches to indicated page in DaVinci Resolve. Input can be one of ("media", "edit", "fusion", "color", "fairlight", "deliver").```
+  * ```OpenPage(pageName)```                              --> None               # Switches to indicated page in DaVinci Resolve. Input can be one of ("media", "edit", "fusion", "color", "fairlight", "deliver").
 ### `ProjectManager`
   * ```CreateProject(projectName)```                      --> Project            # Creates and returns a project if projectName (text) is unique, and None if it is not.
   * ```LoadProject(projectName) ```                       --> Project            # Loads and returns the project with name = projectName (text) if there is a match found, and None if there is no matching Project.
@@ -88,14 +88,14 @@ Some commonly used API functions are described below (*). As with the resolve ob
   * ```StartRendering([idxs...])```                       --> Bool               # Starts rendering for given render jobs based on their indices. If no parameter is given rendering would start for all render jobs.
   * ```StopRendering()```                                 --> None               # Stops rendering for all render jobs.
   * ```IsRenderingInProgress()```                         --> Bool               # Returns true is rendering is in progress.
-  * ```AddRenderJob()```                                  --> Bool               # Adds render job to render queue.```
+  * ```AddRenderJob()```                                  --> Bool               # Adds render job to render queue.
   * ```DeleteRenderJobByIndex(idx)```                     --> Bool               # Deletes render job based on given job index (int).
   * ```DeleteAllRenderJobs()```                           --> Bool               # Deletes all render jobs.
   * ```LoadRenderPreset(presetName)```                    --> Bool               # Sets a preset as current preset for rendering if presetName (text) exists.
   * ```SaveAsNewRenderPreset(presetName)```               --> Bool               # Creates a new render preset by given name if presetName(text) is unique.
   * ```SetRenderSettings([settings map])```               --> Bool               # Sets given settings for rendering. Settings map is a map, keys of map are: "SelectAllFrames", "MarkIn", "MarkOut", "TargetDir", "CustomName".
   * ```GetRenderJobStatus(idx)```                         --> [status info]      # Returns job status and completion rendering percentage of the job by given job index (int).
-  * ```GetSetting(settingName)```                   ```      --> string             # Returns setting value by given settingName (string) if the setting exist. With empty settingName the function returns a full list of settings.
+  * ```GetSetting(settingName)```                  --> string             # Returns setting value by given settingName (string) if the setting exist. With empty settingName the function returns a full list of settings.
   * ```SetSetting(settingName, settingValue)```           --> Bool               # Sets project setting base on given name (string) and value (string).
   * ```GetRenderFormats()```                              --> [render formats...]# Returns a list of available render formats.
   * ```GetRenderCodecs(renderFormat)```                   --> [render codecs...] # Returns a list of available codecs for given render format (string).
@@ -121,7 +121,7 @@ Some commonly used API functions are described below (*). As with the resolve ob
   * ```CreateEmptyTimeline(timelineName)```               --> Timeline           # Creates a new timeline with specified name is timelineName (text) is unique.
 ### `Folder`
   * ```GetClips()```                                      --> [clips...]         # Returns a list of clips (items) within the folder.
-  * ```GetName()```                        ```               --> string             # Returns user-defined name of the folder.
+  * ```GetName()```                                      --> string             # Returns user-defined name of the folder.
   * ```GetSubFolders()```                                 --> [folders...]       # Returns a list of subfolders in the folder.
 ### `MediaPoolItem`
   * ```GetMetadata(metadataType)```                       --> [[types],[values]] # Returns a value of metadataType. If parameter is not specified returns all set metadata parameters.
@@ -138,16 +138,16 @@ Some commonly used API functions are described below (*). As with the resolve ob
   * ```GetName()```                                       --> string             # Returns user-defined name of the timeline.
   * ```SetName(timelineName)```                           --> Bool               # Sets timeline name is timelineName (text) is unique.
   * ```GetStartFrame()```                                 --> int                # Returns frame number at the start of timeline.
-  * ```GetEndFrame()```                                   --> int                # Returns frame number at the end of timeline.```
+  * ```GetEndFrame()```                                   --> int                # Returns frame number at the end of timeline.
   * ```GetTrackCount(trackType)```                        --> int                # Returns a number of track based on specified track type ("audio", "video" or "subtitle").
   * ```GetItemsInTrack(trackType, index)```               --> [items...]         # Returns an array of Timeline items on the video or audio track (based on trackType) at specified index. 1 <= index <= GetTrackCount(trackType).```
-  * ```AddMarker(frameId, color, name, note, duration)``` --> Bool               # Creates a new marker at given frameId position and with given marker information.`
+  * ```AddMarker(frameId, color, name, note, duration)``` --> Bool               # Creates a new marker at given frameId position and with given marker information.
   * ```ApplyGradeFromDRX(path, gradeMode, item1, item2, ...)```--> Bool          # Loads a still from given file path (string) and applies grade to Timeline Items with gradeMode (int): 0 - "No keyframes", 1 - "Source Timecode    aligned", 2 - "Start Frames aligned".
   * ```ApplyGradeFromDRX(path, gradeMode, [items])```     --> Bool               # Loads a still from given file path (string) and applies grade to Timeline Items with gradeMode (int): 0 - "No keyframes", 1 - "Source Timecode aligned", 2 - "Start Frames aligned".
 ### `TimelineItem`
   * ```GetName()```                                       --> string             # Returns a name of the item.
   * ```GetDuration()```                                   --> int                # Returns a duration of item.
-  * ```GetEnd()```                                        --> int                # Returns a position of end frame.`
+  * ```GetEnd()```                                        --> int                # Returns a position of end frame.
   * ```GetFusionCompByIndex(compIndex)```                 --> fusionComp         # Returns Fusion composition object based on given index. 1 <= compIndex <= timelineItem.GetFusionCompCount()
   * ```GetFusionCompNames()```                            --> [names...]         # Returns a list of Fusion composition names associated with the timeline item.
   * ```GetFusionCompByName(compName)```                   --> fusionComp         # Returns Fusion composition object based on given name.
